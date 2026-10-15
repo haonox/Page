@@ -1,0 +1,324 @@
+/* Article styling based on Typora's built-in GitHub theme. Keep these rules
+   scoped to the reader so the home and About pages retain their layout. */
+@font-face {
+  font-family: "Typora Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/typora-github/open-sans-v17-latin-ext_latin-regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Typora Open Sans";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/typora-github/open-sans-v17-latin-ext_latin-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Typora Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/typora-github/open-sans-v17-latin-ext_latin-700.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Typora Open Sans";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/typora-github/open-sans-v17-latin-ext_latin-700italic.woff2") format("woff2");
+}
+
+.reader-shell {
+  width: min(100%, 920px);
+  margin: 20px auto 64px;
+}
+
+.reader-toolbar,
+.reader-footer {
+  max-width: 860px;
+  padding-inline: 30px;
+  margin-inline: auto;
+}
+
+.reader-toolbar {
+  margin-bottom: 10px;
+  color: #777;
+  font-size: 14px;
+}
+
+.reader-title {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 30px 30px 0;
+  color: #333;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  letter-spacing: normal;
+  border-bottom: 1px solid #eee;
+}
+
+.reader-title[hidden] {
+  display: none;
+}
+
+.reader-window .typora-github.vditor-reset {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 30px 30px 100px;
+  overflow: visible;
+  color: #333;
+  font-family: "Typora Open Sans", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial,
+    "PingFang SC", "Microsoft YaHei", "Segoe UI Emoji", sans-serif;
+  font-size: 16px;
+  font-variant-ligatures: normal;
+  line-height: 1.6;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+.reader-window .typora-github a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.reader-window .typora-github a:hover,
+.reader-window .typora-github a:focus-visible {
+  text-decoration: underline;
+}
+
+.reader-window .typora-github h1,
+.reader-window .typora-github h2,
+.reader-window .typora-github h3,
+.reader-window .typora-github h4,
+.reader-window .typora-github h5,
+.reader-window .typora-github h6 {
+  position: relative;
+  margin: 1rem 0;
+  padding-bottom: 0;
+  color: #333;
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: normal;
+}
+
+.reader-window .typora-github h1 {
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.reader-window .typora-github h2 {
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.reader-window .typora-github h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.reader-window .typora-github h4 {
+  font-size: 1.25em;
+}
+
+.reader-window .typora-github h5,
+.reader-window .typora-github h6 {
+  font-size: 1em;
+}
+
+.reader-window .typora-github h6 {
+  color: #777;
+}
+
+.reader-window .typora-github p,
+.reader-window .typora-github blockquote,
+.reader-window .typora-github ul,
+.reader-window .typora-github ol,
+.reader-window .typora-github dl,
+.reader-window .typora-github table {
+  margin: 0.8em 0;
+}
+
+.reader-window .typora-github ul,
+.reader-window .typora-github ol {
+  padding-left: 30px;
+}
+
+.reader-window .typora-github li + li,
+.reader-window .typora-github li > ul,
+.reader-window .typora-github li > ol {
+  margin-top: 0;
+}
+
+.reader-window .typora-github li p {
+  margin: 0.8em 0;
+}
+
+.reader-window .typora-github blockquote {
+  padding: 0 15px;
+  border-left: 4px solid #dfe2e5;
+  color: #777;
+}
+
+.reader-window .typora-github blockquote > :first-child {
+  margin-top: 0;
+}
+
+.reader-window .typora-github blockquote > :last-child {
+  margin-bottom: 0;
+}
+
+.reader-window .typora-github hr {
+  height: 2px;
+  margin: 16px 0;
+  background: #e7e7e7;
+  border: 0;
+}
+
+.reader-window .typora-github table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  border-collapse: collapse;
+  word-break: normal;
+}
+
+.reader-window .typora-github table tr {
+  background: transparent;
+  border: 1px solid #dfe2e5;
+}
+
+.reader-window .typora-github table thead,
+.reader-window .typora-github table tbody tr:nth-child(2n) {
+  background: #f8f8f8;
+}
+
+.reader-window .typora-github table th,
+.reader-window .typora-github table td {
+  padding: 6px 13px;
+  border: 1px solid #dfe2e5;
+  white-space: normal;
+}
+
+.reader-window .typora-github table th {
+  font-weight: 700;
+}
+
+.reader-window .typora-github table td:first-child::after,
+.reader-window .typora-github table th:first-child::after {
+  display: none;
+}
+
+.reader-window .typora-github code:not(.hljs):not(.highlight-chroma),
+.reader-window .typora-github kbd {
+  border: 1px solid #e7eaed;
+  border-radius: 3px;
+  background: #f3f4f4;
+  font-size: 0.9em;
+}
+
+.reader-window .typora-github code:not(.hljs):not(.highlight-chroma) {
+  padding: 0 2px;
+  white-space: break-spaces;
+}
+
+.reader-window .typora-github pre {
+  margin: 15px 0;
+  padding: 8px 10px 6px;
+  border: 1px solid #e7eaed;
+  border-radius: 3px;
+  background: #f8f8f8;
+  overflow-x: auto;
+}
+
+.reader-window .typora-github pre > code,
+.reader-window .typora-github pre > code.hljs {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  background-image: none;
+  font-size: 0.9em;
+  line-height: 1.5;
+  white-space: pre;
+}
+
+.reader-window .typora-github kbd {
+  padding: 0.1em 0.6em;
+  color: #242729;
+  background: #fff;
+  box-shadow: 0 1px 0 rgb(12 13 14 / 20%), 0 0 0 2px #fff inset;
+}
+
+.reader-window .typora-github img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.reader-window .typora-github .vditor-task input {
+  margin-left: -1.3em;
+}
+
+@media (min-width: 1400px) {
+  .reader-shell {
+    max-width: 1084px;
+  }
+
+  .reader-window .typora-github.vditor-reset,
+  .reader-toolbar,
+  .reader-footer,
+  .reader-title {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .reader-shell {
+    max-width: 1260px;
+  }
+
+  .reader-window .typora-github.vditor-reset,
+  .reader-toolbar,
+  .reader-footer,
+  .reader-title {
+    max-width: 1200px;
+  }
+}
+
+@media (max-width: 620px) {
+  .reader-shell {
+    margin-top: 12px;
+  }
+
+  .reader-window .typora-github.vditor-reset {
+    padding: 20px 20px 64px;
+  }
+
+  .reader-toolbar,
+  .reader-footer {
+    padding-inline: 20px;
+  }
+
+  .reader-title {
+    padding-inline: 20px;
+  }
+}
+
+@media print {
+  .reader-window .typora-github.vditor-reset {
+    max-width: none;
+    padding: 0;
+  }
+
+  .reader-window .typora-github pre {
+    page-break-inside: avoid;
+  }
+}

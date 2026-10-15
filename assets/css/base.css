@@ -75,7 +75,9 @@ img {
   align-items: baseline;
   justify-content: space-between;
   gap: 24px;
-  margin-bottom: 64px;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
 }
 
 .site-header h1 {
@@ -133,8 +135,13 @@ p {
   list-style: none;
 }
 
-.entry-list > li + li {
-  margin-top: 32px;
+.entry-list > li {
+  padding: 20px 0;
+  border-top: 1px solid var(--rule);
+}
+
+.entry-list > li:last-child {
+  border-bottom: 1px solid var(--rule);
 }
 
 .entry-list p {
@@ -147,11 +154,28 @@ p {
   line-height: 1.4;
 }
 
-.project-list > li + li {
-  margin-top: 40px;
+.post-list > li {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  align-items: baseline;
+  gap: 20px;
+}
+
+.post-list > li:first-child {
+  padding-top: 0;
+  border-top: 0;
 }
 
 .post-list h3 {
+  margin: 0;
+  font-size: 19px;
+}
+
+.project-list h3 {
+  margin: 0 0 8px;
+}
+
+.project-list p:last-child {
   margin-bottom: 0;
 }
 
@@ -184,53 +208,6 @@ footer p {
   letter-spacing: -0.038em;
 }
 
-.reader-window .vditor-reset {
-  color: var(--text);
-  font-family: Georgia, "Times New Roman", "Songti SC", STSong, serif;
-  font-size: 17px;
-  line-height: 1.78;
-}
-
-.reader-window .vditor-reset h1,
-.reader-window .vditor-reset h2,
-.reader-window .vditor-reset h3,
-.reader-window .vditor-reset h4 {
-  color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, "PingFang SC", sans-serif;
-  letter-spacing: -0.025em;
-}
-
-.reader-window .vditor-reset h2 {
-  margin-top: 2.2em;
-}
-
-.reader-window .vditor-reset h3 {
-  margin-top: 1.8em;
-}
-
-.reader-window .vditor-reset a {
-  color: var(--text);
-}
-
-.reader-window .vditor-reset blockquote {
-  color: #4d4d4d;
-  border-left-color: #b7b7b7;
-}
-
-.reader-window .vditor-reset code:not(.hljs) {
-  background: var(--code);
-}
-
-.reader-window .vditor-reset pre,
-.reader-window .vditor-reset table {
-  border-color: var(--rule);
-}
-
-.reader-window .vditor-reset img {
-  display: block;
-  margin: 2em auto;
-}
-
 .reader-footer {
   display: flex;
   justify-content: space-between;
@@ -258,7 +235,8 @@ footer p {
 
   .site-header {
     display: block;
-    margin-bottom: 52px;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
   }
 
   .site-header nav {
@@ -267,6 +245,11 @@ footer p {
 
   main section + section {
     margin-top: 52px;
+  }
+
+  .post-list > li {
+    grid-template-columns: 1fr;
+    gap: 5px;
   }
 
   .reader-title {

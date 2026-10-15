@@ -4,17 +4,18 @@
 
 ## 视觉设计
 
-网站采用内容优先的极简博客风格：窄栏单列布局、白底黑字、克制的排版层级，以及按日期排列的文章目录。主页视觉参考 [Boris Cherny's Blog](https://borischerny.com/)，同时保留个人介绍、项目与中文技术笔记。
+网站采用内容优先的简洁风格：白底黑字、单列排版。首页只展示按日期排列的文章列表；Projects 展示项目列表；About 保留简短介绍和联系方式。正文阅读器使用接近 Typora GitHub 主题的排版。
 
 ## 页面
 
 - `index.html`：文章列表与网站默认入口
-- `about.html`：个人介绍与项目页
+- `about.html`：简短个人介绍与联系方式
+- `projects.html`：项目列表与相关链接
 - `notes/reader.html`：Markdown 笔记阅读器
 - `posts/`：Markdown 原文与笔记图片；新增正文继续放在这里
 - `assets/vendor/vditor/`：Vditor 3.10.6 静态预览运行时，包含 Markdown、KaTeX、Mermaid 和代码高亮资源
 
-根目录的 `index.html` 是文章索引页；个人介绍与项目集中在独立的 `about.html` 页面。
+根目录的 `index.html` 是文章索引页；顶部导航可进入 About 和 Projects 页面。
 
 ## 笔记管理
 
@@ -63,4 +64,4 @@ python3 -m http.server 8000
 4. 选择 `main` 分支和 `/ (root)` 目录。
 5. 保存并等待部署完成。
 
-所有站内资源均使用相对路径。阅读器由 Vditor 统一解析并安全输出 CommonMark/GFM，正文排版完全使用 Vditor 的 `light` 内容主题，共享的 `base.css` 不覆盖 `.vditor-reset` 内部样式。阅读器仍会修正正文中的相对链接和图片路径，并按需渲染 KaTeX 公式、Mermaid 图表与代码高亮；Mermaid 保持 `strict` 安全级别。运行时不依赖 CDN。Vditor 资源当前固定为 `3.10.6`，升级时需同步更新 HTML 中的版本标记并回归检查公式、图表和代码块。
+所有站内资源均使用相对路径。阅读器由 Vditor 统一解析并安全输出 CommonMark/GFM；`assets/css/typora-github.css` 将正文排版调整为 Typora 默认 GitHub 主题的宽度、字体、标题、表格、引用和代码样式，字体文件及授权信息保存在 `assets/fonts/typora-github/`。共享的 `base.css` 只负责网站外框。阅读器仍会修正正文中的相对链接和图片路径，并按需渲染 KaTeX 公式、Mermaid 图表与代码高亮；Mermaid 保持 `strict` 安全级别。运行时不依赖 CDN。Vditor 资源当前固定为 `3.10.6`，升级时需同步更新 HTML 中的版本标记并回归检查公式、图表和代码块。

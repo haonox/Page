@@ -9,6 +9,7 @@
   }[char]));
 
   function fail(message) {
+    titleNode.hidden = false;
     titleNode.textContent = "无法打开这篇笔记";
     article.innerHTML = `<p>${escapeHtml(message)}</p>`;
   }
@@ -106,9 +107,11 @@
 
       const firstHeading = article.querySelector("h1, h2");
       const title = firstHeading?.textContent.trim() || note.title;
-      titleNode.textContent = title;
       document.title = `${title} · Wenhao Liu`;
-      if (firstHeading?.tagName === "H1") firstHeading.remove();
+      // Keep the Markdown h1 inside the article so it receives the same
+      // theme styling and heading anchors as a Typora HTML export.
+      titleNode.hidden = firstHeading?.tagName === "H1";
+      if (!titleNode.hidden) titleNode.textContent = title;
       resolveRelativeUrls(requestUrl);
     } catch (error) {
       console.error("Note rendering failed", error);
