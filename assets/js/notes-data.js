@@ -10,14 +10,14 @@ window.noteCatalog = {
       "id": "tool-orchestration",
       "date": "2026.09.17",
       "category": "agent",
-      "title": "Agent 多工具调用与并发执行编排问题",
+      "title": "Agent 多工具编排：从并行调用到可靠执行",
       "path": "posts/Agent 多工具调用与并发执行编排问题.md"
     },
     {
       "id": "branchable-session",
       "date": "2026.09.11",
       "category": "agent",
-      "title": "一种面向 Agent 的可分支 Session 设计",
+      "title": "Agent 的可分支 Session：把对话历史建模为树",
       "path": "posts/一种面向 Agent 的可分支 Session 设计.md"
     },
     {
@@ -52,14 +52,14 @@ window.noteCatalog = {
       "id": "function-calling",
       "date": "2026.06.01",
       "category": "agent",
-      "title": "OpenAI Function Calling：协议与执行循环",
+      "title": "OpenAI Function Calling：从工具协议到可靠执行循环",
       "path": "posts/OpenAI Function Calling：协议与执行循环.md"
     },
     {
       "id": "react",
       "date": "2026.05.21",
       "category": "agent",
-      "title": "ReAct：推理—行动循环与错误恢复",
+      "title": "ReAct：让 Agent 在行动与反馈中修正自己",
       "path": "posts/ReAct：推理—行动循环与错误恢复.md"
     },
     {
@@ -87,7 +87,7 @@ window.noteCatalog = {
       "id": "llm-memory",
       "date": "2026.04.06",
       "category": "agent",
-      "title": "LLM 与 Agent 的记忆机制",
+      "title": "Agent 的记忆系统：从上下文到可检索状态",
       "path": "posts/LLM 与 Agent 的记忆机制.md"
     },
     {

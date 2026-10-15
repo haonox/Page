@@ -4,16 +4,17 @@
 
 ## 视觉设计
 
-网站采用 90 年代末至 2000 年代初的桌面网页风格：粉色桌面背景、经典窗口标题栏、凸起按钮与底部状态栏。视觉语言参考并改编自 MIT 许可的 [Vintage Web Hugo Theme](https://github.com/madebydia/vintage-web-hugo-theme)，同时针对当前静态个人主页精简了博客侧栏、归档、分享和访客统计等组件。
+网站采用内容优先的极简博客风格：窄栏单列布局、白底黑字、克制的排版层级，以及按日期排列的文章目录。主页视觉参考 [Boris Cherny's Blog](https://borischerny.com/)，同时保留个人介绍、项目与中文技术笔记。
 
 ## 页面
 
-- `index.html`：一页式个人主页与网站默认入口
+- `index.html`：文章列表与网站默认入口
+- `about.html`：个人介绍与项目页
 - `notes/reader.html`：Markdown 笔记阅读器
 - `posts/`：Markdown 原文与笔记图片；新增正文继续放在这里
 - `assets/vendor/vditor/`：Vditor 3.10.6 静态预览运行时，包含 Markdown、KaTeX、Mermaid 和代码高亮资源
 
-根目录的 `index.html` 是唯一的内容索引页，汇总个人介绍、项目与笔记入口。
+根目录的 `index.html` 是文章索引页；个人介绍与项目集中在独立的 `about.html` 页面。
 
 ## 笔记管理
 
