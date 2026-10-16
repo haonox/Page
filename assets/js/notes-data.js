@@ -7,6 +7,13 @@ window.noteCatalog = {
   },
   "notes": [
     {
+      "id": "go-worker-pool",
+      "date": "2026.10.09",
+      "category": "other",
+      "title": "Go 并发 Worker Pool 经典代码",
+      "path": "posts/Go 并发 Worker Pool 经典代码.md"
+    },
+    {
       "id": "tool-orchestration",
       "date": "2026.09.17",
       "category": "agent",
