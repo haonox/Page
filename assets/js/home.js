@@ -31,18 +31,55 @@ function renderNotes() {
     const heading = document.createElement("h3");
     const link = document.createElement("a");
 
+    link.className = "post-row-link";
+    link.href = `notes/reader.html?id=${encodeURIComponent(note.id)}`;
     time.className = "entry-meta";
     time.dateTime = note.date.replaceAll(".", "-");
     time.textContent = formatDate(note.date);
-    link.href = `notes/reader.html?id=${encodeURIComponent(note.id)}`;
-    link.textContent = note.title;
+    heading.textContent = note.title;
 
-    heading.append(link);
-    item.append(time, heading);
+    link.append(time, heading);
+    item.append(link);
     list.append(item);
   });
 
   container.replaceChildren(list);
 }
 
+function initTabs() {
+  const tabs = [...document.querySelectorAll("[data-tab]")];
+  const panels = [...document.querySelectorAll("[data-panel]")];
+
+  if (tabs.length === 0 || panels.length === 0) return;
+
+  const activate = (name, moveFocus = false) => {
+    tabs.forEach((tab) => {
+      const selected = tab.dataset.tab === name;
+      tab.setAttribute("aria-selected", String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      if (selected && moveFocus) tab.focus();
+    });
+
+    panels.forEach((panel) => {
+      panel.hidden = panel.dataset.panel !== name;
+    });
+  };
+
+  tabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => activate(tab.dataset.tab));
+    tab.addEventListener("keydown", (event) => {
+      let nextIndex;
+      if (event.key === "ArrowRight") nextIndex = (index + 1) % tabs.length;
+      if (event.key === "ArrowLeft") nextIndex = (index - 1 + tabs.length) % tabs.length;
+      if (event.key === "Home") nextIndex = 0;
+      if (event.key === "End") nextIndex = tabs.length - 1;
+      if (nextIndex === undefined) return;
+
+      event.preventDefault();
+      activate(tabs[nextIndex].dataset.tab, true);
+    });
+  });
+}
+
 renderNotes();
+initTabs();

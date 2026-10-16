@@ -4,18 +4,18 @@
 
 ## 视觉设计
 
-网站采用内容优先的简洁风格：白底黑字、单列排版。首页只展示按日期排列的文章列表；Projects 展示项目列表；About 保留简短介绍和联系方式。正文阅读器使用接近 Typora GitHub 主题的排版。
+网站采用内容优先的简洁风格：白底黑字、单列排版。首页通过 Posts、Projects 与 About 三个标签在同一页面切换内容。正文阅读器使用接近 Typora GitHub 主题的排版。
 
 ## 页面
 
-- `index.html`：文章列表与网站默认入口
-- `about.html`：简短个人介绍与联系方式
-- `projects.html`：项目列表与相关链接
+- `index.html`：网站默认入口，通过顶部标签切换文章、项目与个人介绍
+- `about.html`：完整个人介绍、关注方向与联系方式的独立兼容入口
+- `projects.html`：项目列表与相关链接的独立兼容入口
 - `notes/reader.html`：Markdown 笔记阅读器
 - `posts/`：Markdown 原文与笔记图片；新增正文继续放在这里
 - `assets/vendor/vditor/`：Vditor 3.10.6 静态预览运行时，包含 Markdown、KaTeX、Mermaid 和代码高亮资源
 
-根目录的 `index.html` 是文章索引页；顶部导航可进入 About 和 Projects 页面。
+根目录的 `index.html` 是主要内容页；顶部标签只切换当前页面中的内容，不触发页面跳转。
 
 ## 笔记管理
 

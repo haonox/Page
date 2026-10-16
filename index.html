@@ -12,24 +12,79 @@
   <meta name="twitter:card" content="summary">
   <title>Wenhao Liu's Blog</title>
   <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon.png?v=20261012-minimal">
-  <link rel="stylesheet" href="assets/css/base.css?v=20261015-lists">
+  <link rel="stylesheet" href="assets/css/base.css?v=20261017-about">
   <script defer src="assets/js/notes-data.js?v=20260929-agent"></script>
-  <script defer src="assets/js/home.js?v=20261015-list"></script>
+  <script defer src="assets/js/home.js?v=20261017-polish"></script>
 </head>
 <body class="home-page">
   <div class="site-shell">
     <header class="site-header">
       <h1><a href="./">Wenhao Liu's Blog</a></h1>
-      <nav aria-label="主要导航">
-        <a href="projects.html">Projects</a>
-        <a href="about.html">About</a>
+      <nav class="tab-nav" aria-label="主页内容" role="tablist">
+        <button type="button" role="tab" aria-selected="true" aria-controls="posts" id="tab-posts" data-tab="posts">Posts</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="projects" id="tab-projects" data-tab="projects" tabindex="-1">Projects</button>
+        <button type="button" role="tab" aria-selected="false" aria-controls="about" id="tab-about" data-tab="about" tabindex="-1">About</button>
       </nav>
     </header>
 
     <main>
-      <section id="posts" aria-label="Posts">
+      <section id="posts" class="tab-panel" role="tabpanel" aria-labelledby="tab-posts" data-panel="posts">
         <div id="home-notes" aria-live="polite"><p>正在载入文章……</p></div>
         <noscript><p>文章列表需要启用 JavaScript。</p></noscript>
+      </section>
+
+      <section id="projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects" data-panel="projects" hidden>
+        <ul class="entry-list project-list">
+          <li>
+            <h3><a href="https://github.com/haonox/vPhone">vPhone</a></h3>
+            <p>面向 Android 的端侧纯视觉 Agent，以最小运行时实现观察、推理、动作执行与验证闭环。</p>
+            <p class="entry-links"><a href="https://haonox.github.io/PhoneAgent/">Homepage ↗</a></p>
+          </li>
+          <li>
+            <h3><a href="https://github.com/haonox/Memory-Agent">Memory-Agent</a></h3>
+            <p>探索长期记忆、检索与个性化体验的 Agent 框架，聚焦可理解、可调试的记忆生命周期。</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="about" class="tab-panel intro-section" role="tabpanel" aria-labelledby="tab-about" data-panel="about" hidden>
+        <div class="about-hero">
+          <p class="about-kicker">Agent Engineering · Shanghai</p>
+          <h2 class="about-name">刘文豪 <span>Wenhao Liu</span></h2>
+          <p class="about-lead">上海大学硕士研究生，关注可理解、可调试、可靠且低熵的 Agent 系统。</p>
+        </div>
+
+        <dl class="profile-facts">
+          <div><dt>Education</dt><dd>上海大学 · 通信与信息工程学院</dd></div>
+          <div><dt>Program</dt><dd>硕士研究生</dd></div>
+          <div><dt>Graduation</dt><dd>2028</dd></div>
+          <div><dt>Direction</dt><dd>Agent Engineering</dd></div>
+        </dl>
+
+        <div class="about-block">
+          <p class="about-label">Focus</p>
+          <ol class="focus-list">
+            <li><span class="focus-number">01</span><div><h3>Agent Runtime</h3><p>关注状态管理、事件驱动架构，以及可观察、可恢复的执行过程。</p></div></li>
+            <li><span class="focus-number">02</span><div><h3>Memory Systems</h3><p>探索长期记忆、检索和个性化体验背后的记忆生命周期。</p></div></li>
+            <li><span class="focus-number">03</span><div><h3>Tool Orchestration</h3><p>研究依赖、并发、权限、资源冲突与失败语义共同约束下的工具执行。</p></div></li>
+            <li><span class="focus-number">04</span><div><h3>Visual Agents</h3><p>探索视觉智能体在真实环境中的观察、推理、行动与验证闭环。</p></div></li>
+          </ol>
+        </div>
+
+        <div class="about-block principles-block">
+          <p class="about-label">Principles</p>
+          <p class="principles-line">Understandable · Debuggable · Reliable · Low-entropy</p>
+          <p>我希望构建的系统不仅能够完成任务，还能解释过程、暴露状态，并在失败后安全地恢复。</p>
+        </div>
+
+        <div class="about-block now-block">
+          <p class="about-label">Now</p>
+          <p>目前正在寻找 Agent 工程方向的实习机会，希望与优秀的团队一起构建优雅、可控且高效的系统。</p>
+          <div class="contact-links">
+            <a href="mailto:flippedliu@outlook.com">Email ↗</a>
+            <a href="https://github.com/haonox">GitHub ↗</a>
+          </div>
+        </div>
       </section>
     </main>
 
