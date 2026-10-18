@@ -42,6 +42,13 @@ window.noteCatalog = {
       "path": "posts/视觉智能体的跨模型坐标协议.md"
     },
     {
+      "id": "ubuntu-docker-proxy",
+      "date": "2026.08.20",
+      "category": "other",
+      "title": "Ubuntu 安装 Docker Engine 与本地代理配置",
+      "path": "posts/Ubuntu 安装 Docker 与代理配置实录.md"
+    },
+    {
       "id": "ubuntu-chatgpt",
       "date": "2026.08.20",
       "category": "other",
