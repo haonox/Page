@@ -7,6 +7,13 @@ window.noteCatalog = {
   },
   "notes": [
     {
+      "id": "decision-paradigms",
+      "date": "2026.10.18",
+      "category": "agent",
+      "title": "为什么需要不同的 Agent 决策范式？",
+      "path": "posts/为什么需要不同的 Agent 决策范式？.md"
+    },
+    {
       "id": "go-worker-pool",
       "date": "2026.10.09",
       "category": "other",
