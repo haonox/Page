@@ -9,8 +9,6 @@
 ## 页面
 
 - `index.html`：网站默认入口，通过顶部标签切换文章、项目与个人介绍
-- `about.html`：完整个人介绍、关注方向与联系方式的独立兼容入口
-- `projects.html`：项目列表与相关链接的独立兼容入口
 - `notes/reader.html`：Markdown 笔记阅读器
 - `posts/`：Markdown 原文与笔记图片；新增正文继续放在这里
 - `assets/vendor/vditor/`：Vditor 3.10.6 静态预览运行时，包含 Markdown、KaTeX、Mermaid 和代码高亮资源

@@ -271,7 +271,8 @@ p {
 
 .about-kicker,
 .about-label {
-  margin-bottom: 12px;
+  margin: 0 0 12px;
+  padding: 0;
   color: var(--muted);
   font-size: 12px;
   font-weight: 600;
@@ -280,114 +281,44 @@ p {
 }
 
 .about-name {
-  margin: 0 0 18px;
+  margin: 0;
   font-size: clamp(30px, 6vw, 42px);
   line-height: 1.1;
   letter-spacing: -0.04em;
 }
 
-.about-name span {
-  display: block;
-  margin-top: 7px;
-  color: var(--muted);
-  font-size: 0.43em;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.about-lead {
-  max-width: 34em;
-  margin: 0;
-  font-size: 18px;
-  line-height: 1.65;
-}
-
-.profile-facts {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 0;
-}
-
-.profile-facts > div {
-  padding: 20px 0;
+.about-block {
+  padding: 28px 0;
   border-bottom: 1px solid var(--rule);
 }
 
-.profile-facts > div:nth-child(odd) {
-  padding-right: 24px;
+.about-block:last-child {
+  border-bottom: 0;
 }
 
-.profile-facts > div:nth-child(even) {
-  padding-left: 24px;
-  border-left: 1px solid var(--rule);
+.about-block > p {
+  margin: 0;
 }
 
-.profile-facts dt {
-  margin-bottom: 4px;
-  color: var(--muted);
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+.education-entry {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4px 16px;
 }
 
-.profile-facts dd {
+.education-entry + .education-entry {
+  margin-top: 12px;
+}
+
+.education-entry p {
   margin: 0;
   font-weight: 600;
 }
 
-.about-block {
-  margin-top: 48px;
-}
-
-.focus-list {
-  margin: 0;
-  padding: 0;
-  border-top: 1px solid var(--rule);
-  list-style: none;
-}
-
-.focus-list li {
-  display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
-  gap: 16px;
-  padding: 20px 0;
-  border-bottom: 1px solid var(--rule);
-}
-
-.focus-number {
-  padding-top: 2px;
+.education-entry span {
   color: var(--muted);
-  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-  font-size: 12px;
-}
-
-.focus-list h3 {
-  margin: 0 0 5px;
-  font-size: 17px;
-}
-
-.focus-list p {
-  margin: 0;
-  color: #333;
-}
-
-.principles-block {
-  padding: 22px 24px;
-  border-left: 3px solid var(--text);
-  background: #f7f7f7;
-}
-
-.principles-line {
-  margin-bottom: 10px;
-  font-size: 18px;
-  font-weight: 650;
-  letter-spacing: -0.015em;
-}
-
-.principles-block p:last-child,
-.now-block p:last-of-type {
-  margin-bottom: 0;
+  white-space: nowrap;
 }
 
 .contact-links {
@@ -491,22 +422,8 @@ footer p {
     width: 100%;
   }
 
-  .profile-facts {
-    grid-template-columns: 1fr;
-  }
-
-  .profile-facts > div:nth-child(odd),
-  .profile-facts > div:nth-child(even) {
-    padding: 16px 0;
-    border-left: 0;
-  }
-
   .about-block {
-    margin-top: 40px;
-  }
-
-  .principles-block {
-    padding: 20px;
+    padding: 24px 0;
   }
 
   main section + section {

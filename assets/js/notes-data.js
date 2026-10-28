@@ -21,6 +21,13 @@ window.noteCatalog = {
       "path": "posts/Go 并发 Worker Pool 经典代码.md"
     },
     {
+      "id": "linux-process-memory",
+      "date": "2026.10.01",
+      "category": "other",
+      "title": "从 python app.py 看懂 Linux 进程与内存",
+      "path": "posts/从 python app.py 看懂 Linux 进程与内存.md"
+    },
+    {
       "id": "tool-orchestration",
       "date": "2026.09.17",
       "category": "agent",
