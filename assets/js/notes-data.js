@@ -70,6 +70,13 @@ window.noteCatalog = {
       "path": "posts/Ubuntu 26.04 上 ChatGPT 桌面端消息发送失败排查.md"
     },
     {
+      "id": "mcp-function-calling-skills",
+      "date": "2026.06.15",
+      "category": "agent",
+      "title": "理解 MCP、Function Calling 与 Skills：AI Agent 的三种能力机制",
+      "path": "posts/MCP_Function_Calling_Skills.md"
+    },
+    {
       "id": "nat-traversal",
       "date": "2026.06.10",
       "category": "other",
