@@ -3,8 +3,10 @@
   --text: #111;
   --muted: #6b6b6b;
   --rule: #dedede;
+  --border: #d3d3d3;
   --surface: #fff;
   --code: #f5f5f5;
+  --radius: 6px;
 }
 
 * {
@@ -111,21 +113,22 @@ img {
 .tab-nav {
   overflow: hidden;
   gap: 0 !important;
-  border: 1px solid #d3d3d3;
-  border-radius: 7px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
 }
 
 .tab-nav button {
   min-height: 34px;
   padding: 5px 12px;
   border: 0;
-  border-left: 1px solid #d3d3d3;
+  border-left: 1px solid var(--border);
   border-radius: 0;
   background: #fff;
   color: var(--text);
   font: inherit;
   line-height: 1;
   cursor: pointer;
+  transition: background-color 120ms ease;
 }
 
 .tab-nav button:first-child {
@@ -211,6 +214,7 @@ p {
   color: var(--muted);
   font-size: 14px;
   line-height: 1.4;
+  font-variant-numeric: tabular-nums;
 }
 
 .post-list > li {
@@ -227,7 +231,8 @@ p {
   align-items: baseline;
   gap: 20px;
   padding: 18px 10px;
-  border-radius: 4px;
+  border-radius: var(--radius);
+  transition: background-color 120ms ease;
 }
 
 .post-list > li:first-child .post-row-link {
@@ -257,6 +262,20 @@ p {
 
 .project-list h3 {
   margin: 0 0 8px;
+}
+
+.project-list h3 a {
+  text-decoration: underline;
+  text-decoration-color: #c4c4c4;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.project-list h3 a:hover,
+.project-list h3 a:focus-visible {
+  color: var(--text) !important;
+  text-decoration-color: currentColor;
+  text-decoration-thickness: 2px;
 }
 
 .project-list p:last-child {
@@ -333,9 +352,10 @@ p {
   min-height: 36px;
   align-items: center;
   padding: 5px 12px;
-  border: 1px solid #cfcfcf;
-  border-radius: 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
   text-decoration: none;
+  transition: border-color 120ms ease;
 }
 
 .contact-links a:hover,
@@ -377,6 +397,14 @@ footer p {
   display: flex;
   justify-content: space-between;
   gap: 20px;
+}
+
+.reader-window .typora-github .reader-meta {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  font-variant-numeric: tabular-nums;
 }
 
 /* 404 page compatibility */
@@ -443,6 +471,12 @@ footer p {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .tab-nav button,
+  .post-row-link,
+  .contact-links a {
+    transition: none;
   }
 }
 

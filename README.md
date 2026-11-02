@@ -61,4 +61,4 @@ python3 -m http.server 8000
 4. 选择 `main` 分支和 `/ (root)` 目录。
 5. 保存并等待部署完成。
 
-所有站内资源均使用相对路径。阅读器由 Vditor 统一解析并安全输出 CommonMark/GFM；`assets/css/typora-github.css` 将正文排版调整为 Typora 默认 GitHub 主题的宽度、字体、标题、表格、引用和代码样式，字体文件及授权信息保存在 `assets/fonts/typora-github/`。共享的 `base.css` 只负责网站外框。阅读器仍会修正正文中的相对链接和图片路径，并按需渲染 KaTeX 公式、Mermaid 图表与代码高亮；Mermaid 保持 `strict` 安全级别。运行时不依赖 CDN。Vditor 资源当前固定为 `3.10.6`，升级时需同步更新 HTML 中的版本标记并回归检查公式、图表和代码块。
+所有站内资源均使用相对路径。阅读器由 Vditor 统一解析并安全输出 CommonMark/GFM；`assets/css/typora-github.css` 参照 Typora 默认 GitHub 主题处理正文的标题、表格、引用和代码样式，并将行宽限制在适合长文阅读的范围内。共享的 `base.css` 负责网站外框与阅读器页头页脚。阅读器仍会修正正文中的相对链接和图片路径，并按需渲染 KaTeX 公式、Mermaid 图表与代码高亮；Mermaid 保持 `strict` 安全级别。运行时不依赖 CDN。Vditor 资源当前固定为 `3.10.6`，升级时需同步更新 HTML 中的版本标记并回归检查公式、图表和代码块。

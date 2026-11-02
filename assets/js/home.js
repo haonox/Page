@@ -1,16 +1,5 @@
 "use strict";
 
-function formatDate(value) {
-  const date = new Date(`${value}T00:00:00`);
-  if (Number.isNaN(date.getTime())) return value;
-
-  return new Intl.DateTimeFormat("en-US", {
-    month: "short",
-    day: "numeric",
-    year: "numeric",
-  }).format(date);
-}
-
 function renderNotes() {
   const catalog = window.noteCatalog;
   const container = document.getElementById("home-notes");
@@ -35,7 +24,7 @@ function renderNotes() {
     link.href = `notes/reader.html?id=${encodeURIComponent(note.id)}`;
     time.className = "entry-meta";
     time.dateTime = note.date;
-    time.textContent = formatDate(note.date);
+    time.textContent = note.date;
     heading.textContent = note.title;
 
     link.append(time, heading);

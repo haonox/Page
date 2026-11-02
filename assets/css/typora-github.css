@@ -1,56 +1,28 @@
 /* Article styling based on Typora's built-in GitHub theme. Keep these rules
    scoped to the reader so the home page retains its layout. */
-@font-face {
-  font-family: "Typora Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: url("../fonts/typora-github/open-sans-v17-latin-ext_latin-regular.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Typora Open Sans";
-  font-style: italic;
-  font-weight: 400;
-  src: url("../fonts/typora-github/open-sans-v17-latin-ext_latin-italic.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Typora Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: url("../fonts/typora-github/open-sans-v17-latin-ext_latin-700.woff2") format("woff2");
-}
-
-@font-face {
-  font-family: "Typora Open Sans";
-  font-style: italic;
-  font-weight: 700;
-  src: url("../fonts/typora-github/open-sans-v17-latin-ext_latin-700italic.woff2") format("woff2");
-}
-
 .reader-shell {
-  width: min(100%, 920px);
+  width: min(100%, 740px);
   margin: 20px auto 64px;
 }
 
 .reader-toolbar,
 .reader-footer {
-  max-width: 860px;
+  max-width: 740px;
   padding-inline: 30px;
   margin-inline: auto;
 }
 
 .reader-toolbar {
   margin-bottom: 10px;
-  color: #777;
+  color: var(--muted);
   font-size: 14px;
 }
 
 .reader-title {
-  max-width: 860px;
+  max-width: 740px;
   margin: 0 auto;
   padding: 30px 30px 0;
-  color: #333;
+  color: var(--text);
   font-size: 2.25rem;
   line-height: 1.2;
   letter-spacing: normal;
@@ -62,13 +34,12 @@
 }
 
 .reader-window .typora-github.vditor-reset {
-  max-width: 860px;
+  max-width: 740px;
   margin: 0 auto;
   padding: 30px 30px 100px;
   overflow: visible;
-  color: #333;
-  font-family: "Typora Open Sans", "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica, Arial,
-    "PingFang SC", "Microsoft YaHei", "Segoe UI Emoji", sans-serif;
+  color: var(--text);
+  font-family: inherit;
   font-size: 16px;
   font-variant-ligatures: normal;
   line-height: 1.6;
@@ -77,13 +48,16 @@
 }
 
 .reader-window .typora-github a {
-  color: #4183c4;
-  text-decoration: none;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
 }
 
 .reader-window .typora-github a:hover,
 .reader-window .typora-github a:focus-visible {
-  text-decoration: underline;
+  color: inherit;
+  text-decoration-thickness: 2px;
 }
 
 .reader-window .typora-github h1,
@@ -95,7 +69,7 @@
   position: relative;
   margin: 1rem 0;
   padding-bottom: 0;
-  color: #333;
+  color: var(--text);
   font-family: inherit;
   font-weight: 700;
   line-height: 1.4;
@@ -267,48 +241,22 @@
   margin-left: -1.3em;
 }
 
-@media (min-width: 1400px) {
-  .reader-shell {
-    max-width: 1084px;
-  }
-
-  .reader-window .typora-github.vditor-reset,
-  .reader-toolbar,
-  .reader-footer,
-  .reader-title {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1800px) {
-  .reader-shell {
-    max-width: 1260px;
-  }
-
-  .reader-window .typora-github.vditor-reset,
-  .reader-toolbar,
-  .reader-footer,
-  .reader-title {
-    max-width: 1200px;
-  }
-}
-
 @media (max-width: 620px) {
   .reader-shell {
     margin-top: 12px;
   }
 
   .reader-window .typora-github.vditor-reset {
-    padding: 20px 20px 64px;
+    padding: 20px 16px 64px;
   }
 
   .reader-toolbar,
   .reader-footer {
-    padding-inline: 20px;
+    padding-inline: 16px;
   }
 
   .reader-title {
-    padding-inline: 20px;
+    padding-inline: 16px;
   }
 }
 

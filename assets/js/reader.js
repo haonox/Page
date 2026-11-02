@@ -23,8 +23,9 @@
     });
     article.querySelectorAll("a[href]").forEach((link) => {
       const value = link.getAttribute("href");
+      const external = /^https?:/i.test(value);
       if (!/^(?:[a-z]+:|\/|#)/i.test(value)) link.href = new URL(value, baseUrl).href;
-      if (/^https?:/i.test(link.href)) {
+      if (external) {
         link.target = "_blank";
         link.rel = "noopener noreferrer";
       }
@@ -53,6 +54,23 @@
 
     const initialize = window.mermaid.initialize.bind(window.mermaid);
     window.mermaid.initialize = (options) => initialize({ ...options, securityLevel: "strict" });
+  }
+
+  function estimateMinutes(markdown) {
+    const prose = markdown.replace(/(?:```|~~~)[\s\S]*?(?:```|~~~)/g, " ");
+    const cjk = (prose.match(/[\u3400-\u9fff]/g) || []).length;
+    const words = (prose.replace(/[\u3400-\u9fff]/g, " ").match(/[A-Za-z0-9][A-Za-z0-9'’._-]*/g) || []).length;
+    return Math.max(1, Math.round(cjk / 350 + words / 220));
+  }
+
+  function prependMeta(markdown) {
+    const meta = document.createElement("p");
+    const time = document.createElement("time");
+    meta.className = "reader-meta";
+    time.dateTime = note.date;
+    time.textContent = note.date;
+    meta.append(time, ` · 约 ${estimateMinutes(markdown)} 分钟`);
+    article.prepend(meta);
   }
 
   async function renderMarkdown(markdown, requestUrl) {
@@ -104,6 +122,7 @@
       const raw = await response.text();
       const markdown = raw.replace(/^(?:\uFEFF)?---[ \t]*\r?\n[\s\S]*?\r?\n---[ \t]*(?:\r?\n|$)/, "");
       await renderMarkdown(markdown, requestUrl);
+      prependMeta(markdown);
 
       const firstHeading = article.querySelector("h1, h2");
       const title = firstHeading?.textContent.trim() || note.title;
