@@ -1,7 +1,7 @@
 "use strict";
 
 function formatDate(value) {
-  const date = new Date(`${value.replaceAll(".", "-")}T00:00:00`);
+  const date = new Date(`${value}T00:00:00`);
   if (Number.isNaN(date.getTime())) return value;
 
   return new Intl.DateTimeFormat("en-US", {
@@ -34,7 +34,7 @@ function renderNotes() {
     link.className = "post-row-link";
     link.href = `notes/reader.html?id=${encodeURIComponent(note.id)}`;
     time.className = "entry-meta";
-    time.dateTime = note.date.replaceAll(".", "-");
+    time.dateTime = note.date;
     time.textContent = formatDate(note.date);
     heading.textContent = note.title;
 

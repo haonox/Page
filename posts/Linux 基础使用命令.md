@@ -1,7 +1,6 @@
 ---
 id: linux-basics
 date: 2026-04-16
-category: other
 title: 一些 Linux 基础使用命令
 ---
 

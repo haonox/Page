@@ -1,7 +1,6 @@
 ---
 id: ubuntu-docker-proxy
 date: 2026-08-20
-category: other
 title: Ubuntu 安装 Docker Engine 与本地代理配置
 ---
 

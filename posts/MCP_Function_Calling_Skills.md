@@ -1,7 +1,6 @@
 ---
 id: mcp-function-calling-skills
 date: 2026-06-15
-category: agent
 title: 理解 MCP、Function Calling 与 Skills：AI Agent 的三种能力机制
 ---
 

@@ -1,7 +1,6 @@
 ---
 id: llm-memory
 date: 2026-04-06
-category: agent
 title: Agent 的记忆系统：从上下文到可检索状态
 ---
 

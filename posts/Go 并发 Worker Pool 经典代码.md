@@ -1,7 +1,6 @@
 ---
 id: go-worker-pool
 date: 2026-10-09
-category: other
 title: Go 并发 Worker Pool 经典代码
 ---
 

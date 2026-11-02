@@ -1,7 +1,6 @@
 ---
 id: react
 date: 2026-05-21
-category: agent
 title: ReAct：让 Agent 在行动与反馈中修正自己
 ---
 

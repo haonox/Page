@@ -1,148 +1,124 @@
 // 此文件由 tools/build_notes.py 自动生成，请勿手动编辑。
 // 修改 posts/ 下的 front-matter 后运行：python3 tools/build_notes.py
 window.noteCatalog = {
-  "categoryLabels": {
-    "agent": "Agent",
-    "other": "Other"
-  },
   "notes": [
     {
       "id": "decision-paradigms",
-      "date": "2026.10.18",
-      "category": "agent",
+      "date": "2026-10-18",
       "title": "为什么需要不同的 Agent 决策范式？",
       "path": "posts/为什么需要不同的 Agent 决策范式？.md"
     },
     {
       "id": "go-worker-pool",
-      "date": "2026.10.09",
-      "category": "other",
+      "date": "2026-10-09",
       "title": "Go 并发 Worker Pool 经典代码",
       "path": "posts/Go 并发 Worker Pool 经典代码.md"
     },
     {
       "id": "linux-process-memory",
-      "date": "2026.10.01",
-      "category": "other",
+      "date": "2026-10-01",
       "title": "从 python app.py 看懂 Linux 进程与内存",
       "path": "posts/从 python app.py 看懂 Linux 进程与内存.md"
     },
     {
       "id": "tool-orchestration",
-      "date": "2026.09.17",
-      "category": "agent",
+      "date": "2026-09-17",
       "title": "Agent 多工具编排：从并行调用到可靠执行",
       "path": "posts/Agent 多工具调用与并发执行编排问题.md"
     },
     {
       "id": "branchable-session",
-      "date": "2026.09.11",
-      "category": "agent",
+      "date": "2026-09-11",
       "title": "Agent 的可分支 Session：把对话历史建模为树",
       "path": "posts/一种面向 Agent 的可分支 Session 设计.md"
     },
     {
       "id": "phoneagent-state",
-      "date": "2026.08.28",
-      "category": "agent",
+      "date": "2026-08-28",
       "title": "Agent 状态与事件驱动架构",
       "path": "posts/Agent 状态与事件驱动架构.md"
     },
     {
       "id": "visual-coordinates",
-      "date": "2026.08.25",
-      "category": "agent",
+      "date": "2026-08-25",
       "title": "视觉智能体的跨模型坐标协议",
       "path": "posts/视觉智能体的跨模型坐标协议.md"
     },
     {
       "id": "ubuntu-docker-proxy",
-      "date": "2026.08.20",
-      "category": "other",
+      "date": "2026-08-20",
       "title": "Ubuntu 安装 Docker Engine 与本地代理配置",
       "path": "posts/Ubuntu 安装 Docker 与代理配置实录.md"
     },
     {
       "id": "ubuntu-chatgpt",
-      "date": "2026.08.20",
-      "category": "other",
+      "date": "2026-08-20",
       "title": "Ubuntu 26.04 上 ChatGPT 桌面端消息发送失败排查",
       "path": "posts/Ubuntu 26.04 上 ChatGPT 桌面端消息发送失败排查.md"
     },
     {
       "id": "mcp-function-calling-skills",
-      "date": "2026.06.15",
-      "category": "agent",
+      "date": "2026-06-15",
       "title": "理解 MCP、Function Calling 与 Skills：AI Agent 的三种能力机制",
       "path": "posts/MCP_Function_Calling_Skills.md"
     },
     {
       "id": "nat-traversal",
-      "date": "2026.06.10",
-      "category": "other",
+      "date": "2026-06-10",
       "title": "NAT Traversal：内网穿透原理",
       "path": "posts/内网穿透原理.md"
     },
     {
       "id": "function-calling",
-      "date": "2026.06.01",
-      "category": "agent",
+      "date": "2026-06-01",
       "title": "OpenAI Function Calling：从工具协议到可靠执行循环",
       "path": "posts/OpenAI Function Calling：协议与执行循环.md"
     },
     {
       "id": "react",
-      "date": "2026.05.21",
-      "category": "agent",
+      "date": "2026-05-21",
       "title": "ReAct：让 Agent 在行动与反馈中修正自己",
       "path": "posts/ReAct：推理—行动循环与错误恢复.md"
     },
     {
       "id": "proxy-traffic",
-      "date": "2026.05.09",
-      "category": "other",
+      "date": "2026-05-09",
       "title": "代理网络的流量链路",
       "path": "posts/代理网络的流量链路.md"
     },
     {
       "id": "pytorch-ops",
-      "date": "2026.04.30",
-      "category": "other",
+      "date": "2026-04-30",
       "title": "PyTorch 高频核心算子",
       "path": "posts/PyTorch 高频核心算子.md"
     },
     {
       "id": "linux-basics",
-      "date": "2026.04.16",
-      "category": "other",
+      "date": "2026-04-16",
       "title": "一些 Linux 基础使用命令",
       "path": "posts/Linux 基础使用命令.md"
     },
     {
       "id": "llm-memory",
-      "date": "2026.04.06",
-      "category": "agent",
+      "date": "2026-04-06",
       "title": "Agent 的记忆系统：从上下文到可检索状态",
       "path": "posts/LLM 与 Agent 的记忆机制.md"
     },
     {
       "id": "python-async",
-      "date": "2025.09.20",
-      "category": "other",
+      "date": "2025-09-20",
       "title": "Python Async/Await：协程与异步编程",
       "path": "posts/协程与异步编程.md"
     },
     {
       "id": "mf5681",
-      "date": "2025.08.23",
-      "category": "other",
+      "date": "2025-08-23",
       "title": "海康威视 MF5681（800 万 4K USB 摄像头）Ubuntu 使用记录",
       "path": "posts/海康威视 MF5681（800 万 4K USB 摄像头）Ubuntu 使用记录.md"
     },
     {
       "id": "seed-42",
-      "date": "2025.06.15",
-      "category": "other",
+      "date": "2025-06-15",
       "title": "为什么随机种子常用 42？",
       "path": "posts/Random_seed_42.md"
     }

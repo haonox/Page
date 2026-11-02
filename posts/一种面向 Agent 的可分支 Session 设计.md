@@ -1,7 +1,6 @@
 ---
 id: branchable-session
 date: 2026-09-11
-category: agent
 title: Agent 的可分支 Session：把对话历史建模为树
 ---
 

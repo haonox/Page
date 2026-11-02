@@ -17,13 +17,12 @@
 
 ## 笔记管理
 
-笔记元数据（日期、分类、标题）以 front-matter 形式写在每篇 Markdown 顶部，示例：
+笔记元数据（日期、标题）以 front-matter 形式写在每篇 Markdown 顶部，示例：
 
 ```markdown
 ---
 id: agent-runtime
 date: 2026-08-01
-category: agent
 title: Agent Runtime Notes
 ---
 
@@ -36,7 +35,7 @@ title: Agent Runtime Notes
 python3 tools/build_notes.py
 ```
 
-`id` 和 `date` 是已发布笔记的必填字段。`id` 是用于公开链接的稳定短标识，只能包含小写字母、数字和连字符，并且不能重复；`date` 必须是真实的 `YYYY-MM-DD` 日期。`category` 可取 `agent` 或 `other`，省略时使用 `other`；`title` 省略时取正文首个一级标题。
+`id` 和 `date` 是已发布笔记的必填字段。`id` 是用于公开链接的稳定短标识，只能包含小写字母、数字和连字符，并且不能重复；`date` 必须是真实的 `YYYY-MM-DD` 日期。`title` 省略时取正文首个一级标题。
 
 脚本会严格校验所有元数据，同时检查未闭合的代码围栏和失效的本地图片引用，再重新生成 `assets/js/notes-data.js`。该生成文件需要和代码一起提交，不要手动编辑。CI 或提交前可以使用下面的命令检查数据是否为最新：
 

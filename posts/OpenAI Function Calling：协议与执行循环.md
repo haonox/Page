@@ -1,7 +1,6 @@
 ---
 id: function-calling
 date: 2026-06-01
-category: agent
 title: OpenAI Function Calling：从工具协议到可靠执行循环
 ---
 

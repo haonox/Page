@@ -18,12 +18,7 @@ ROOT = Path(__file__).resolve().parent.parent
 POSTS_DIR = ROOT / "posts"
 OUT_PATH = ROOT / "assets" / "js" / "notes-data.js"
 
-CATEGORY_LABELS = {
-    "agent": "Agent",
-    "other": "Other",
-}
-VALID_CATEGORIES = set(CATEGORY_LABELS)
-VALID_FIELDS = {"id", "date", "category", "title"}
+VALID_FIELDS = {"id", "date", "title"}
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 FRONT_MATTER_RE = re.compile(r"\A(?:\uFEFF)?---[ \t]*\r?\n(.*?)\r?\n---[ \t]*(?:\r?\n|\Z)", re.DOTALL)
@@ -166,20 +161,14 @@ def collect_notes():
         if not validate_date(date):
             errors.append(f"{path.name}: date 必须是真实的 YYYY-MM-DD 日期")
 
-        category = fields.get("category", "other")
-        if category not in VALID_CATEGORIES:
-            choices = " | ".join(CATEGORY_LABELS)
-            errors.append(f"{path.name}: category 必须是 {choices} 之一")
-
         title = fields.get("title") or heading_title(body)
         if not title or not title.strip():
             errors.append(f"{path.name}: title 缺失且正文没有一级标题")
 
-        if ID_RE.fullmatch(note_id) and validate_date(date) and category in VALID_CATEGORIES and title and title.strip():
+        if ID_RE.fullmatch(note_id) and validate_date(date) and title and title.strip():
             notes.append({
                 "id": note_id,
-                "date": date.replace("-", "."),
-                "category": category,
+                "date": date,
                 "title": title,
                 "path": f"posts/{path.name}",
             })
@@ -189,7 +178,7 @@ def collect_notes():
 
 
 def render_catalog(notes):
-    payload = {"categoryLabels": CATEGORY_LABELS, "notes": notes}
+    payload = {"notes": notes}
     return "\n".join([
         "// 此文件由 tools/build_notes.py 自动生成，请勿手动编辑。",
         "// 修改 posts/ 下的 front-matter 后运行：python3 tools/build_notes.py",
