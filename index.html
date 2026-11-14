@@ -3,96 +3,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="刘文豪的个人主页，记录 Agent Engineering、系统设计与工程实践。研究与构建可理解、可调试的 Agent 系统。">
-  <meta property="og:title" content="Wenhao Liu · Agent Engineering">
-  <meta property="og:description" content="Notes on Agent Engineering, systems, and software.">
+  <meta name="description" content="刘文豪，上海大学通信工程硕士研究生。关注 Agent Engineering、运行时、记忆系统、工具编排与视觉智能体。">
+  <meta property="og:title" content="刘文豪 | Wenhao Liu">
+  <meta property="og:description" content="Agent Engineering、系统设计与工程实践。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://haonox.github.io/Page/">
   <meta name="twitter:card" content="summary">
-  <title>Wenhao Liu · Agent Engineering</title>
+  <title>刘文豪 | Wenhao Liu</title>
   <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon.png?v=20261012-minimal">
-  <link rel="stylesheet" href="assets/css/base.css?v=20261114">
+  <link rel="stylesheet" href="assets/css/base.css?v=20261114-cards">
+  <link rel="stylesheet" href="assets/css/home.css?v=20261114-no-avatar">
   <script defer src="assets/js/notes-data.js?v=20261103"></script>
-  <script defer src="assets/js/home.js?v=20261114"></script>
+  <script defer src="assets/js/home.js?v=20261114-chronological"></script>
 </head>
 <body class="home-page" id="top">
   <a class="skip-link" href="#main-content">跳到主要内容</a>
-  <div class="site-shell">
-    <header class="site-header">
-      <div class="masthead">
-        <a class="site-mark" href="./" aria-label="Wenhao Liu 主页">Wenhao Liu<span>.</span></a>
-        <div class="header-links">
-          <a href="https://github.com/haonox">GitHub <span aria-hidden="true">↗</span></a>
-          <a href="mailto:flippedliu@outlook.com">Email <span aria-hidden="true">↗</span></a>
-        </div>
-      </div>
-      <div class="profile-intro">
-        <a class="availability" href="mailto:flippedliu@outlook.com"><span class="status-dot" aria-hidden="true"></span>正在寻找 Agent 工程方向的实习机会<span aria-hidden="true">↗</span></a>
-      </div>
+  <div class="home-container">
+    <header class="home-header">
+      <a class="home-brand" href="./">刘文豪（Wenhao Liu）</a>
+      <nav class="section-nav" aria-label="主页导航">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#posts">Notes</a>
+      </nav>
     </header>
 
-    <nav class="tab-nav" aria-label="主页内容" role="tablist">
-      <button type="button" role="tab" aria-selected="true" aria-controls="posts" id="tab-posts" data-tab="posts">Posts<span class="tab-count" id="post-count"></span></button>
-      <button type="button" role="tab" aria-selected="false" aria-controls="projects" id="tab-projects" data-tab="projects" tabindex="-1">Projects<span class="tab-count">01</span></button>
-      <button type="button" role="tab" aria-selected="false" aria-controls="about" id="tab-about" data-tab="about" tabindex="-1">About</button>
-    </nav>
-
     <main id="main-content" tabindex="-1">
-      <section id="posts" class="tab-panel" role="tabpanel" aria-labelledby="tab-posts" data-panel="posts" tabindex="0">
-        <div id="home-notes" aria-live="polite"><p>正在载入文章……</p></div>
-        <noscript><p>文章列表需要启用 JavaScript。</p></noscript>
+      <section class="surface-panel" aria-labelledby="profile-title">
+        <div class="profile-copy">
+          <h1 id="profile-title">刘文豪 <span>（Wenhao Liu）</span></h1>
+          <p class="profile-affiliation">上海大学 · 通信工程硕士研究生</p>
+          <p class="profile-affiliation" lang="en">M.S. Student in Communication Engineering, Shanghai University</p>
+          <p class="profile-bio">关注 Agent Engineering 中的运行时、记忆系统、工具编排与视觉智能体，探索可理解、可调试且可靠的系统。在这里记录设计过程中的思考，也整理动手实践中遇到的问题。</p>
+          <p class="profile-status"><span aria-hidden="true"></span>正在寻找 Agent 工程方向的实习机会</p>
+          <div class="profile-links">
+            <a class="pill-link" href="mailto:flippedliu@outlook.com">Email</a>
+            <a class="pill-link" href="https://github.com/haonox">GitHub</a>
+          </div>
+        </div>
       </section>
 
-      <section id="projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects" data-panel="projects" tabindex="0" hidden>
-        <ol class="project-list">
-          <li>
-            <span class="project-index" aria-hidden="true">01</span>
-            <article>
-              <h3>vPhone</h3>
+      <section id="projects" class="surface-panel" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="section-title">Projects</h2>
+        <div class="project-grid">
+          <article class="inner-panel project-card">
+            <div>
+              <h3><a class="project-name" href="https://github.com/haonox/vPhone">vPhone</a></h3>
               <p class="project-description">面向 Android 的端侧纯视觉 Agent，以最小运行时实现观察、推理、动作执行与验证闭环。</p>
-              <div class="project-links">
-                <a href="https://haonox.github.io/PhoneAgent/">项目主页 <span aria-hidden="true">↗</span></a>
-                <a href="https://github.com/haonox/vPhone">GitHub <span aria-hidden="true">↗</span></a>
+              <div class="topic-tags" aria-label="项目方向">
+                <span>Android</span><span>Visual Agent</span><span>Agent Runtime</span>
               </div>
-            </article>
-          </li>
-        </ol>
+            </div>
+            <div class="resource-links">
+              <a class="resource-link" href="https://haonox.github.io/PhoneAgent/">项目主页</a>
+              <a class="resource-link" href="https://github.com/haonox/vPhone">GitHub</a>
+            </div>
+          </article>
+        </div>
       </section>
 
-      <section id="about" class="tab-panel intro-section" role="tabpanel" aria-labelledby="tab-about" data-panel="about" tabindex="0" hidden>
-        <div class="about-block">
-          <h3 class="about-label">Focus</h3>
-          <div class="about-content">
-            <p>关注 Agent Engineering 中的运行时、记忆系统、工具编排与视觉智能体，探索可理解、可调试且可靠的系统。</p>
-            <p>在这里记录设计过程中的思考，也整理动手实践中遇到的问题。</p>
+      <section id="experience" class="surface-panel" aria-labelledby="experience-title">
+        <h2 id="experience-title" class="section-title">Education &amp; Experience</h2>
+        <div class="experience-grid">
+          <div class="inner-panel">
+            <h3>Education</h3>
+            <ol class="education-timeline">
+              <li>
+                <img class="institution-logo" src="assets/images/shanghai-university-emblem.png" alt="上海大学校徽" width="32" height="32" loading="lazy" decoding="async">
+                <div>
+                  <p class="education-period">2021 — 2025</p>
+                  <p class="education-title">上海大学，通信工程，本科</p>
+                </div>
+              </li>
+              <li>
+                <img class="institution-logo" src="assets/images/shanghai-university-emblem.png" alt="上海大学校徽" width="32" height="32" loading="lazy" decoding="async">
+                <div>
+                  <p class="education-period">2025 — 至今</p>
+                  <p class="education-title">上海大学，通信工程，硕士研究生</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div class="inner-panel">
+            <h3>Awards</h3>
+            <div class="topic-tags award-tags" aria-label="获奖情况">
+              <span>研究生一等奖学金</span>
+              <span>研究生二等奖学金</span>
+              <span>国家励志奖学金</span>
+              <span>中国青年科技创新“揭榜挂帅”擂台赛人工智能领域国家级二等奖</span>
+            </div>
           </div>
         </div>
-        <div class="about-block">
-          <h3 class="about-label">Now</h3>
-          <div class="about-content">
-            <p>目前正在寻找 Agent 工程方向的实习机会，希望与优秀的团队一起构建可控且高效的系统。</p>
-            <a class="inline-link" href="mailto:flippedliu@outlook.com">聊一聊 <span aria-hidden="true">↗</span></a>
-          </div>
+      </section>
+
+      <section id="posts" class="surface-panel" aria-labelledby="posts-title">
+        <div class="section-heading">
+          <h2 id="posts-title" class="section-title">Posts &amp; Notes</h2>
+          <span id="note-count" class="note-count"></span>
         </div>
-        <div class="about-block">
-          <h3 class="about-label">Education</h3>
-          <div class="education-list">
-            <div class="education-entry"><div><p>上海大学</p><p class="education-degree">通信工程 · 硕士研究生</p></div><span>2025 — 至今</span></div>
-            <div class="education-entry"><div><p>上海大学</p><p class="education-degree">通信工程 · 本科</p></div><span>2021 — 2025</span></div>
-          </div>
-        </div>
-        <div class="about-block">
-          <h3 class="about-label">Elsewhere</h3>
-          <div class="about-content contact-links">
-            <a href="mailto:flippedliu@outlook.com">flippedliu@outlook.com <span aria-hidden="true">↗</span></a>
-            <a href="https://github.com/haonox">GitHub / haonox <span aria-hidden="true">↗</span></a>
-          </div>
-        </div>
+        <div id="home-notes" aria-live="polite"><p>正在载入文章……</p></div>
+        <noscript><p>文章目录需要启用 JavaScript。你也可以在 <a href="https://github.com/haonox/Page/tree/main/posts">GitHub</a> 阅读 Markdown 原文。</p></noscript>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>© 2026 Wenhao Liu</p>
+    <footer class="home-footer">
+      <p>© 2026 Wenhao Liu. Built with GitHub Pages.</p>
       <a href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
     </footer>
   </div>

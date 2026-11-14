@@ -4,16 +4,24 @@
 
 ## 视觉设计
 
-网站采用内容优先的简洁风格：白底、深灰正文、少量深蓝强调色，主体为 720px 单列。页头以衬线姓名、简短介绍和实习联系入口建立个人标识；首页通过 Posts、Projects 与 About 三个文字标签在同一页面切换内容。文章以日期与标题构成目录，项目以编号和说明展示，手机端自动调整为紧凑的纵向排版。正文阅读器使用接近 Typora GitHub 主题的排版。
+主页采用浅灰背景、白色圆角卡片、柔和阴影和蓝色链接，主体最大宽度为 1080px。按个人介绍、Projects、Education & Experience、Posts & Notes 的顺序纵向展示，顶部导航滚动定位到对应模块。经历区域在桌面上使用两列，小屏幕改为单列；笔记按日期从新到旧排列，桌面上日期和标题分列，手机上日期位于标题上方。
+
+视觉布局参考 [Jiaqi Xin 的个人主页](https://xin-jiaqi.github.io/)，采用独立编写的 HTML、CSS 和 JavaScript 实现。其公开模板仓库的 [README 权利说明](https://github.com/Xin-Jiaqi/minimal-academic-homepage#rights-status) 目前标注尚未选择开源许可，因此本项目没有复制其源码和图片。
+
+首页样式位于 `assets/css/home.css`，共享基础样式与阅读器外框位于 `assets/css/base.css`；正文阅读器继续使用接近 Typora GitHub 主题的排版。
+
+教育经历中的上海大学校徽已下载到 `assets/images/shanghai-university-emblem.png`，来源为上海大学官网的[校徽介绍页](https://www.shu.edu.cn/xxgk/sdwh/xhjs.htm)及其[原始图片](https://www.shu.edu.cn/__local/0/08/C6/1EABE492B0CF228A5564D6E6ABE_779D1EE3_5BF7.png)。页面使用本地图片，并保持原图比例。
 
 ## 页面
 
-- `index.html`：网站默认入口，通过顶部标签切换文章、项目与个人介绍
+- `index.html`：网站默认入口，包含个人介绍、项目、经历与笔记模块
 - `notes/reader.html`：Markdown 笔记阅读器
 - `posts/`：Markdown 原文与笔记图片；新增正文继续放在这里
 - `assets/vendor/vditor/`：Vditor 3.10.6 静态预览运行时，包含 Markdown、KaTeX、Mermaid 和代码高亮资源
 
-根目录的 `index.html` 是主要内容页；顶部标签只切换当前页面中的内容，不触发页面跳转。
+根目录的 `index.html` 是主要内容页；顶部导航通过 `#projects`、`#experience` 和 `#posts` 定位。旧的首页标签入口已改为单页滚动结构，文章链接保持不变。
+
+首页继续使用生成的 `assets/js/notes-data.js`，由 `assets/js/home.js` 按目录已有的日期倒序展示全部文章。文章不再按主题分组或折叠，每行包含发布日期与标题，整行可点击进入阅读器。
 
 ## 笔记管理
 
