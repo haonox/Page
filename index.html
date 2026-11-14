@@ -3,81 +3,127 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="刘文豪的个人博客，记录 Agent Engineering、系统设计与工程实践。">
-  <meta property="og:title" content="Wenhao Liu's Blog">
+  <meta name="description" content="刘文豪的个人主页，记录 Agent Engineering、系统设计与工程实践。研究与构建可理解、可调试的 Agent 系统。">
+  <meta property="og:title" content="Wenhao Liu · Agent Engineering">
   <meta property="og:description" content="Notes on Agent Engineering, systems, and software.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://haonox.github.io/Page/">
   <meta name="twitter:card" content="summary">
-  <title>Wenhao Liu's Blog</title>
+  <title>Wenhao Liu · Agent Engineering</title>
   <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon.png?v=20261012-minimal">
-  <link rel="stylesheet" href="assets/css/base.css?v=20261103">
+  <link rel="stylesheet" href="assets/css/base.css?v=20261114">
   <script defer src="assets/js/notes-data.js?v=20261103"></script>
-  <script defer src="assets/js/home.js?v=20261103"></script>
+  <script defer src="assets/js/home.js?v=20261114"></script>
 </head>
-<body class="home-page">
+<body class="home-page" id="top">
+  <a class="skip-link" href="#main-content">跳到主要内容</a>
   <div class="site-shell">
     <header class="site-header">
-      <h1><a href="./">Wenhao Liu's Blog</a></h1>
-      <nav class="tab-nav" aria-label="主页内容" role="tablist">
-        <button type="button" role="tab" aria-selected="true" aria-controls="posts" id="tab-posts" data-tab="posts">Posts</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="projects" id="tab-projects" data-tab="projects" tabindex="-1">Projects</button>
-        <button type="button" role="tab" aria-selected="false" aria-controls="about" id="tab-about" data-tab="about" tabindex="-1">About</button>
-      </nav>
+      <div class="masthead">
+        <a class="site-mark" href="./" aria-label="Wenhao Liu 主页">wl<span>.</span></a>
+        <div class="header-links">
+          <a href="https://github.com/haonox">GitHub <span aria-hidden="true">↗</span></a>
+          <a href="mailto:flippedliu@outlook.com">Email <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <div class="profile-intro">
+        <p class="eyebrow">Agent Engineering <span aria-hidden="true">/</span> Shanghai</p>
+        <h1>Wenhao Liu<span class="profile-name-cn">刘文豪</span></h1>
+        <p class="profile-description">研究与构建可理解、可调试的 Agent 系统。<br>这里记录我的思考、实验与工程实践。</p>
+        <a class="availability" href="mailto:flippedliu@outlook.com"><span class="status-dot" aria-hidden="true"></span>寻找 Agent 工程方向的实习机会<span aria-hidden="true">↗</span></a>
+      </div>
     </header>
 
-    <main>
-      <section id="posts" class="tab-panel" role="tabpanel" aria-labelledby="tab-posts" data-panel="posts">
+    <nav class="tab-nav" aria-label="主页内容" role="tablist">
+      <button type="button" role="tab" aria-selected="true" aria-controls="posts" id="tab-posts" data-tab="posts">Posts<span class="tab-count" id="post-count"></span></button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="projects" id="tab-projects" data-tab="projects" tabindex="-1">Projects<span class="tab-count">02</span></button>
+      <button type="button" role="tab" aria-selected="false" aria-controls="about" id="tab-about" data-tab="about" tabindex="-1">About</button>
+    </nav>
+
+    <main id="main-content" tabindex="-1">
+      <section id="posts" class="tab-panel" role="tabpanel" aria-labelledby="tab-posts" data-panel="posts" tabindex="0">
+        <div class="section-intro">
+          <h2>写作与思考</h2>
+          <p>Agent、系统设计，以及实践中的细节。</p>
+        </div>
         <div id="home-notes" aria-live="polite"><p>正在载入文章……</p></div>
         <noscript><p>文章列表需要启用 JavaScript。</p></noscript>
       </section>
 
-      <section id="projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects" data-panel="projects" hidden>
-        <ul class="entry-list project-list">
+      <section id="projects" class="tab-panel" role="tabpanel" aria-labelledby="tab-projects" data-panel="projects" tabindex="0" hidden>
+        <div class="section-intro">
+          <h2>在构建的东西</h2>
+          <p>把关于 Agent 的想法，放进实际运行的系统。</p>
+        </div>
+        <ol class="project-list">
           <li>
-            <h3><a href="https://github.com/haonox/vPhone">vPhone</a></h3>
-            <p>面向 Android 的端侧纯视觉 Agent，以最小运行时实现观察、推理、动作执行与验证闭环。</p>
-            <p class="entry-links"><a href="https://haonox.github.io/PhoneAgent/">Homepage ↗</a></p>
+            <span class="project-index" aria-hidden="true">01</span>
+            <article>
+              <p class="project-category">Android · Visual Agent</p>
+              <h3><a href="https://github.com/haonox/vPhone">vPhone<span aria-hidden="true">↗</span></a></h3>
+              <p class="project-description">面向 Android 的端侧纯视觉 Agent，以最小运行时实现观察、推理、动作执行与验证闭环。</p>
+              <div class="project-flow" aria-label="Agent 执行循环：观察、推理、执行、验证">
+                <span>观察</span><span aria-hidden="true">→</span><span>推理</span><span aria-hidden="true">→</span><span>执行</span><span aria-hidden="true">→</span><span>验证</span>
+              </div>
+              <div class="project-links">
+                <a href="https://haonox.github.io/PhoneAgent/">查看项目 <span aria-hidden="true">↗</span></a>
+                <a href="https://github.com/haonox/vPhone">GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
           </li>
           <li>
-            <h3><a href="https://github.com/haonox/Memory-Agent">Memory-Agent</a></h3>
-            <p>探索长期记忆、检索与个性化体验的 Agent 框架，聚焦可理解、可调试的记忆生命周期。</p>
+            <span class="project-index" aria-hidden="true">02</span>
+            <article>
+              <p class="project-category">Memory · Agent Framework</p>
+              <h3><a href="https://github.com/haonox/Memory-Agent">Memory-Agent<span aria-hidden="true">↗</span></a></h3>
+              <p class="project-description">探索长期记忆、检索与个性化体验的 Agent 框架，聚焦可理解、可调试的记忆生命周期。</p>
+              <div class="project-links">
+                <a href="https://github.com/haonox/Memory-Agent">GitHub <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
           </li>
-        </ul>
+        </ol>
       </section>
 
-      <section id="about" class="tab-panel intro-section" role="tabpanel" aria-labelledby="tab-about" data-panel="about" hidden>
-        <div class="about-hero">
-          <p class="about-kicker">Agent Engineering · Shanghai</p>
-          <h2 class="about-name">刘文豪</h2>
+      <section id="about" class="tab-panel intro-section" role="tabpanel" aria-labelledby="tab-about" data-panel="about" tabindex="0" hidden>
+        <div class="section-intro">
+          <h2>关于我</h2>
+          <p>刘文豪，上海大学通信工程硕士研究生。</p>
         </div>
-
         <div class="about-block">
-          <h3 class="about-label">Education</h3>
-          <div class="education-list">
-            <div class="education-entry"><p>上海大学 · 通信工程（本科）</p><span>2021—2025</span></div>
-            <div class="education-entry"><p>上海大学 · 通信工程（硕士研究生）</p><span>2025—至今</span></div>
+          <h3 class="about-label">Focus<span>关注方向</span></h3>
+          <div class="about-content">
+            <p>关注 Agent Engineering 中的运行时、记忆系统、工具编排与视觉智能体，探索可理解、可调试且可靠的系统。</p>
+            <p>在这里记录设计过程中的思考，也整理动手实践中遇到的问题。</p>
           </div>
         </div>
-
         <div class="about-block">
-          <h3 class="about-label">Focus</h3>
-          <p>关注 Agent Engineering 中的运行时、记忆系统、工具编排与视觉智能体，探索可理解、可调试且可靠的系统。</p>
+          <h3 class="about-label">Now<span>最近</span></h3>
+          <div class="about-content">
+            <p>目前正在寻找 Agent 工程方向的实习机会，希望与优秀的团队一起构建可控且高效的系统。</p>
+            <a class="inline-link" href="mailto:flippedliu@outlook.com">聊一聊 <span aria-hidden="true">↗</span></a>
+          </div>
         </div>
-
-        <div class="about-block now-block">
-          <h3 class="about-label">Now</h3>
-          <p>目前正在寻找 Agent 工程方向的实习机会，希望与优秀的团队一起构建可控且高效的系统。</p>
-          <div class="contact-links">
-            <a href="mailto:flippedliu@outlook.com">Email ↗</a>
-            <a href="https://github.com/haonox">GitHub ↗</a>
+        <div class="about-block">
+          <h3 class="about-label">Education<span>教育经历</span></h3>
+          <div class="education-list">
+            <div class="education-entry"><div><p>上海大学</p><p class="education-degree">通信工程 · 硕士研究生</p></div><span>2025 — 至今</span></div>
+            <div class="education-entry"><div><p>上海大学</p><p class="education-degree">通信工程 · 本科</p></div><span>2021 — 2025</span></div>
+          </div>
+        </div>
+        <div class="about-block">
+          <h3 class="about-label">Elsewhere<span>保持联系</span></h3>
+          <div class="about-content contact-links">
+            <a href="mailto:flippedliu@outlook.com">flippedliu@outlook.com <span aria-hidden="true">↗</span></a>
+            <a href="https://github.com/haonox">GitHub / haonox <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
       <p>© 2026 Wenhao Liu</p>
+      <a href="#top">回到顶部 <span aria-hidden="true">↑</span></a>
     </footer>
   </div>
 </body>

@@ -13,12 +13,15 @@ function renderNotes() {
 
   const list = document.createElement("ul");
   list.className = "entry-list post-list";
+  const count = document.getElementById("post-count");
+  if (count) count.textContent = String(catalog.notes.length).padStart(2, "0");
 
   catalog.notes.forEach((note) => {
     const item = document.createElement("li");
     const time = document.createElement("time");
     const heading = document.createElement("h3");
     const link = document.createElement("a");
+    const arrow = document.createElement("span");
 
     link.className = "post-row-link";
     link.href = `notes/reader.html?id=${encodeURIComponent(note.id)}`;
@@ -26,8 +29,11 @@ function renderNotes() {
     time.dateTime = note.date;
     time.textContent = note.date;
     heading.textContent = note.title;
+    arrow.className = "post-arrow";
+    arrow.textContent = "→";
+    arrow.setAttribute("aria-hidden", "true");
 
-    link.append(time, heading);
+    link.append(time, heading, arrow);
     item.append(link);
     list.append(item);
   });
