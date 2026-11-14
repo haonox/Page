@@ -3,10 +3,7 @@
   --text: #111;
   --muted: #6b6b6b;
   --rule: #dedede;
-  --border: #d3d3d3;
   --surface: #fff;
-  --code: #f5f5f5;
-  --radius: 6px;
   --accent: #315c83;
 }
 
@@ -189,13 +186,6 @@ p {
   letter-spacing: 0.08em;
 }
 
-.profile-description {
-  margin: 0 0 23px;
-  color: #535a54;
-  font-size: 16px;
-  line-height: 1.95;
-}
-
 .availability {
   display: inline-flex;
   align-items: center;
@@ -287,24 +277,6 @@ p {
   padding-top: 31px;
 }
 
-.section-intro {
-  margin-bottom: 19px;
-}
-
-.section-intro h2 {
-  margin: 0 0 7px;
-  font-size: 17px;
-  font-weight: 600;
-  letter-spacing: 0;
-}
-
-.section-intro > p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 1.8;
-}
-
 .entry-list {
   margin: 0;
   padding: 0;
@@ -378,30 +350,11 @@ p {
   font-size: 11px;
 }
 
-.project-category {
-  margin: 0 0 9px;
-  color: var(--muted);
-  font-size: 11px;
-  letter-spacing: 0.03em;
-}
-
 .project-list h3 {
   margin: 0 0 13px;
   font-size: 25px;
   font-weight: 500;
   letter-spacing: -0.035em;
-}
-
-.project-list h3 a {
-  display: inline-flex;
-  gap: 14px;
-  align-items: baseline;
-}
-
-.project-list h3 a span {
-  color: var(--muted);
-  font-size: 16px;
-  font-weight: 400;
 }
 
 .project-description {
@@ -410,24 +363,6 @@ p {
   color: #535a54;
   font-size: 14px;
   line-height: 1.95;
-}
-
-.project-flow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 13px;
-  align-items: center;
-  width: fit-content;
-  margin: 21px 0 0;
-  padding: 10px 16px;
-  border-left: 2px solid #ccd8e3;
-  background: #f6f8fa;
-  color: var(--accent);
-  font-size: 12px;
-}
-
-.project-flow span:nth-child(even) {
-  color: #8298ab;
 }
 
 .project-links {
@@ -470,12 +405,6 @@ p {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0;
-}
-
-.about-label span {
-  color: var(--muted);
-  font-size: 11px;
-  font-weight: 400;
 }
 
 .about-content p {
@@ -610,10 +539,6 @@ footer p {
   letter-spacing: -0.04em;
 }
 
-.button {
-  color: inherit;
-}
-
 @media (max-width: 620px) {
   .site-shell {
     width: calc(100% - 40px);
@@ -634,10 +559,6 @@ footer p {
   .profile-name-cn {
     font-size: 13px;
   }
-  .profile-description {
-    font-size: 14px;
-    line-height: 2;
-  }
   .eyebrow {
     margin-bottom: 16px;
     font-size: 10px;
@@ -655,15 +576,6 @@ footer p {
   }
   .tab-panel {
     padding-top: 26px;
-  }
-  .section-intro {
-    margin-bottom: 14px;
-  }
-  .section-intro h2 {
-    font-size: 16px;
-  }
-  .section-intro > p {
-    font-size: 12px;
   }
   .post-row-link {
     grid-template-columns: minmax(0, 1fr) 16px;
@@ -695,11 +607,6 @@ footer p {
   }
   .project-description {
     font-size: 13px;
-  }
-  .project-flow {
-    gap: 10px;
-    padding: 9px 12px;
-    font-size: 11px;
   }
   .about-block {
     grid-template-columns: 1fr;
