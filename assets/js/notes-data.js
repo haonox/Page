@@ -3,6 +3,12 @@
 window.noteCatalog = {
   "notes": [
     {
+      "id": "mcp-sqlite",
+      "date": "2026-10-25",
+      "title": "从一次数据库查询理解 MCP：协议、进程通信与模型工具调用",
+      "path": "posts/从一次数据库查询理解 MCP：协议、进程通信与模型工具调用.md"
+    },
+    {
       "id": "decision-paradigms",
       "date": "2026-10-18",
       "title": "为什么需要不同的 Agent 决策范式？",
