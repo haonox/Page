@@ -53,7 +53,66 @@
     if (!window.mermaid?.initialize) throw new Error("Mermaid 渲染器加载失败");
 
     const initialize = window.mermaid.initialize.bind(window.mermaid);
-    window.mermaid.initialize = (options) => initialize({ ...options, securityLevel: "strict" });
+    window.mermaid.initialize = (options) => initialize({
+      ...options,
+      securityLevel: "strict",
+      // Mermaid scopes themeCSS to each generated SVG. Match each diagram type separately.
+      themeCSS: `
+        &[aria-roledescription^="flowchart"] {
+          .node :is(rect, circle, ellipse, polygon, path) {
+            fill: #f8f9fa;
+            stroke: #333;
+            stroke-width: 1.5px;
+          }
+
+          .cluster rect {
+            fill: #fff;
+            stroke: #adb5bd;
+          }
+
+          .edgeLabel, .labelBkg {
+            background-color: #f8f9fa;
+          }
+
+          .edgeLabel rect {
+            fill: #f8f9fa;
+          }
+        }
+
+        &[aria-roledescription="sequence"] {
+          rect.actor {
+            fill: #f8f9fa;
+            stroke: #333;
+            stroke-width: 1.5px;
+            rx: 0;
+            ry: 0;
+          }
+
+          .actor-line, line[id^="actor"], .loopLine {
+            stroke: #adb5bd;
+          }
+
+          .messageLine0, .messageLine1 {
+            stroke: #333;
+          }
+
+          #arrowhead path, #crosshead path, #filled-head path {
+            fill: #333;
+            stroke: #333;
+          }
+
+          .note, .labelBox, .activation0, .activation1, .activation2 {
+            fill: #f8f9fa;
+            stroke: #adb5bd;
+          }
+
+          text.actor > tspan, .messageText, .labelText > tspan,
+          .loopText > tspan, .noteText > tspan {
+            fill: #333;
+          }
+        }
+      `,
+    });
   }
 
   function estimateMinutes(markdown) {
