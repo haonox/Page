@@ -9,10 +9,22 @@ window.noteCatalog = {
       "path": "posts/从一次数据库查询理解 MCP：协议、进程通信与模型工具调用.md"
     },
     {
+      "id": "go-slice",
+      "date": "2026-10-25",
+      "title": "Go 切片（Slice）知识点梳理",
+      "path": "posts/Go 切片（Slice）知识点梳理.md"
+    },
+    {
       "id": "decision-paradigms",
       "date": "2026-10-18",
       "title": "为什么需要不同的 Agent 决策范式？",
       "path": "posts/为什么需要不同的 Agent 决策范式？.md"
+    },
+    {
+      "id": "go-value-reference",
+      "date": "2026-10-16",
+      "title": "Go 中的值类型和引用类型",
+      "path": "posts/Go 中的值类型和引用类型.md"
     },
     {
       "id": "go-worker-pool",
